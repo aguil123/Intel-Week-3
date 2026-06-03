@@ -1,0 +1,201 @@
+/* Add your CSS here */
+
+/* Page background and reset spacing */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(220, 224, 230);
+}
+
+/* Header card section at the top */
+.card {
+  text-align: center;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 40px;
+  margin: 0;
+  background-color: rgb(43,117,228);
+}
+
+/* Default image size used in the header/logo area */
+header img {
+  width: 150px;
+  height: auto;
+  margin-top: 0px;
+}
+
+/* Style for each timeline card */
+.timeline-card {
+  background-color: white;
+  border-radius: 14px;
+  padding: 18px 24px 24px;
+  margin: 20px 0;
+  flex: 0 0 calc((100% - 60px) / 4);
+  max-width: calc((100% - 60px) / 4);
+  min-height: 250px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+/* Inner card layout for consistent spacing */
+.timeline-card > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  height: 100%;
+}
+
+/* Card image styling */
+.card-image {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 0 14px;
+  border-radius: 10px;
+}
+
+/* Card title spacing */
+.timeline-card h2 {
+  margin: 0 0 6px;
+}
+
+/* Card subtitle spacing */
+.timeline-card h3 {
+  margin: 0 0 12px;
+}
+
+/* Main hero heading styling */
+h1 {
+  font-size: 100px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Subtitle text inside the header */
+p1 {
+  color: white;
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Timeline container: horizontal scrolling for extra cards */
+section{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+  width: min(100%, 1240px);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Hide overlay text by default */
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 41, 83, 0.774);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.timeline-card:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+  
+}
+
+.timeline-card:hover,.card:focus{
+  transform: scale(1.05);
+}
+
+/* Center the custom p2 element on the page */
+p2{
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 760px) {
+  .card {
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+
+  p1 {
+    font-size: 1.1rem;
+  }
+
+  section {
+    flex-wrap: wrap;
+    gap: 16px;
+    overflow-x: hidden;
+    padding: 16px;
+    width: 100%;
+    max-width: 100%;
+    scroll-snap-type: none;
+  }
+
+  .timeline-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: auto;
+    margin: 0 auto 18px;
+  }
+
+  .card-image {
+    max-height: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    padding: 20px 12px;
+  }
+
+  header img {
+    width: 120px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  p1 {
+    font-size: 1rem;
+  }
+
+  .timeline-card {
+    padding: 16px;
+  }
+}

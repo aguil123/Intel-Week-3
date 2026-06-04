@@ -199,3 +199,53 @@ p2{
     padding: 16px;
   }
 }
+
+/* Content card styling for the 3-column Bootstrap section */
+.content-card {
+  background-color: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Content card hover effect */
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Content card heading styling */
+.content-card h2 {
+  margin: 0 0 16px;
+  color: rgb(43, 117, 228);
+  font-family: 'Lato', sans-serif;
+}
+
+/* Content card paragraph styling */
+.content-card p {
+  margin: 0 0 20px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Bootstrap button styling override */
+.btn-primary {
+  background-color: rgb(43, 117, 228);
+  border-color: rgb(43, 117, 228);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 8px 20px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgb(30, 85, 170);
+  border-color: rgb(30, 85, 170);
+}

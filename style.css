@@ -249,3 +249,75 @@ p2{
   background-color: rgb(30, 85, 170);
   border-color: rgb(30, 85, 170);
 }
+
+/* RTL (Right-to-Left) Support for Arabic and other RTL languages */
+/* These rules automatically apply when dir="rtl" is set on the html element */
+
+/* Adjust overlay positioning for RTL */
+[dir="rtl"] .overlay {
+  left: auto;
+  right: 0;
+}
+
+/* Adjust card image margin for RTL */
+[dir="rtl"] .card-image {
+  margin: 0 0 14px 0;
+}
+
+/* Ensure proper text direction for RTL */
+[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Adjust header styling for RTL */
+[dir="rtl"] header {
+  text-align: center;
+}
+
+/* Ensure section elements work properly in RTL */
+[dir="rtl"] section {
+  justify-content: flex-end;
+}
+
+/* Adjust responsive layout for RTL on small screens */
+@media (max-width: 760px) {
+  [dir="rtl"] .timeline-card {
+    margin: 0 auto 18px;
+  }
+}
+
+/* Content card adjustments for RTL */
+[dir="rtl"] .content-card h2 {
+  text-align: right;
+}
+
+[dir="rtl"] .content-card p {
+  text-align: right;
+}
+
+/* Footer styling */
+.footer {
+  background-color: rgb(43, 117, 228);
+  color: white;
+  text-align: center;
+  padding: 24px 20px;
+  margin-top: 40px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* RTL footer styling */
+[dir="rtl"] .footer {
+  text-align: center;
+}
+
+[dir="rtl"] .footer p {
+  direction: rtl;
+  unicode-bidi: embed;
+}
